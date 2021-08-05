@@ -3,8 +3,10 @@ p {
 }
 
 .Card {
-    background: white;
+    background: rgb(212, 212, 212);
     border-radius: 10px;
+    border: 5px solid rgb(58, 58, 58);
+   
 }
 
 .Card__img {
@@ -40,4 +42,42 @@ p {
 
 .Card__data .title {
     font-weight: 700;
+}
+
+.Card__data .id {
+    font-weight: 900;
+}
+.Card__data .hp {
+    font-weight: 700;
+    color: rgb(223, 30, 30);
+}
+.Card__data .attack {
+    font-weight: 700;
+    color: rgb(253, 141, 49);
+}
+.Card__data .defence {
+    font-weight: 700;
+    color:rgb(238, 250, 65)
+}
+.Card__data .specialAtk {
+    font-weight: 700;
+    color:rgb(58, 114, 218)
+}
+.Card__data .specialDef {
+    font-weight: 700;
+    color:rgb(63, 218, 58)
+}
+.Card__data .speed {
+    font-weight: 700;
+    color:rgb(218, 58, 218)
+}
+
+.hr {
+    border: 5px solid rgb(58, 58, 58);
+    border-radius: 5px;
+}
+
+.Card__data .moves {
+    font-weight: 700;
+    color:rgb(37, 108, 141)
 }

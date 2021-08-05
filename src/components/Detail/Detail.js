@@ -19,8 +19,8 @@ function Detail({ pokemon, showDetails }) {
         toArray.push(dataEvo.resEvo.data.chain)
         const chainEvo1 = dataEvo.resEvo.data.chain.species.name
         const chainEvo2 = dataEvo.resEvo.data.chain.evolves_to[0].species.name
-        console.log('Forma inicial: '+chainEvo1)
-        console.log('Primera evolución: '+chainEvo2)
+        console.log('Forma inicial: ' + chainEvo1)
+        console.log('Primera evolución: ' + chainEvo2)
         // switch of cases of Chain-Evolution
         //    switch(dataEvo){
         //        case 1:
@@ -75,62 +75,64 @@ function Detail({ pokemon, showDetails }) {
                 }
             </div>
             <div className="Card__info">
-                <div>
-                    <p>pokemon id: {pokemon.id}</p>
+                <div className="Card__data Card__data--weight ">
+                    <p className="id">Número Pokedex: {pokemon.id}</p>
+                </div>
+                <div className="Card__data Card__data--weight ">
+                    <p className="id">Base Experience: {pokemon.base_experience}</p>
                 </div>
                 <div className="Card__data Card__data--weight">
-                    <p className="title">Hp: {pokemon.stats[0].base_stat} </p>
+                    <p className="title">Weight: {Math.round(pokemon.weight / 4.3)} lbs </p>
                 </div>
                 <div className="Card__data Card__data--weight">
-                    <p className="title">Attack: {pokemon.stats[1].base_stat} </p>
+                    <p className="title">Height: {Math.round(pokemon.height * 3.9)} "</p>
                 </div>
-                <div className="Card__data Card__data--weight">
-                    <p className="title">Defence: {pokemon.stats[2].base_stat} </p>
+                <div className="Card__data">
+                    <p className="hp">Hp: {pokemon.stats[0].base_stat} </p>
                 </div>
-                <div className="Card__data Card__data--weight">
-                    <p className="title">Special-atack: {pokemon.stats[3].base_stat} </p>
+                <div className="Card__data">
+                    <p className="attack">Attack: {pokemon.stats[1].base_stat} </p>
                 </div>
-                <div className="Card__data Card__data--weight">
-                    <p className="title">Special-defence: {pokemon.stats[4].base_stat} </p>
+                <div className="Card__data ">
+                    <p className="defence">Defence: {pokemon.stats[2].base_stat} </p>
                 </div>
-                <div className="Card__data Card__data--weight">
-                    <p className="title">Speed: {pokemon.stats[5].base_stat} </p>
+                <div className="Card__data">
+                    <p className="specialAtk">Special-atack: {pokemon.stats[3].base_stat} </p>
                 </div>
-                <div className="Card__data Card__data--weight">
-                    <p className="title">Height: {pokemon.height}</p>
+                <div className="Card__data">
+                    <p className="specialDef">Special-defence: {pokemon.stats[4].base_stat} </p>
                 </div>
-
-                <br></br>
-
+                <div className="Card__data">
+                    <p className="speed">Speed: {pokemon.stats[5].base_stat} </p>
+                </div>
                 <div className="Card__data Card__data--ability">
-                    <p className="title">Abilities:
+                    <p className="title">Ability:
                         {
                             pokemon.abilities.map(ability => {
                                 return (
-                                    <div>
+                                    <li>
                                         {ability.ability.name}
-                                    </div>
+                                    </li>
                                 )
                             })
                         }
                     </p>
                 </div>
-                <div>
-
-                </div>
+               <hr className="hr"></hr>
                 <div className="Card__data Card__data--moves">
-                    <li className="title">Moves:
+                    <p className="moves">Moves:
                         {
                             pokemon.moves.map(move => {
                                 return (
-                                    <div>
+                                    <li>
                                         {move.move.name}
-                                    </div>
+                                    </li>
                                 )
                             })
                         }
-                    </li>
+                    </p>
                 </div>
+               
             </div>
         </div>
     );

@@ -24,10 +24,10 @@ function Card({ pokemon }) {
             </div>
             <div className="Card__info">
                 <div className="Card__data Card__data--weight">
-                    <p className="title">Weight: {pokemon.weight} </p>
+                    <p className="title">Weight: {Math.round(pokemon.weight / 4.3)} lbs </p>
                 </div>
                 <div className="Card__data Card__data--weight">
-                    <p className="title">Height: {pokemon.height}</p>
+                    <p className="title">Height: {Math.round(pokemon.height * 3.9)} "</p>
                 </div>
                 <div className="Card__data Card__data--ability">
                     <p className="title">Ability:
